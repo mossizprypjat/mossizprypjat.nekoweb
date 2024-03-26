@@ -1,0 +1,61 @@
+@font-face {
+    font-family: "Minecraft";
+    src: url("Minecraft.ttf") format("truetype");
+}
+
+body {
+    font-family: Minecraft, monospace;
+    margin: 0;
+    padding: 0;
+    color: #fff; /* Light text */
+    background: url('images/webb_background.png');
+    background-size:cover;
+}
+
+header {
+    background-color: #556b2f; /* Moss green header background */
+    color: #fff; /* White text */
+    padding: 1em;
+    text-align: center;
+}
+
+section {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    align-items: stretch;
+}
+
+article {
+    flex: 3; /* Take up 3/4 of the available space */
+    background-color: rgba(85, 107, 47, 0.8); /* Moss green content background with 80% opacity */
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px #333;
+}
+
+aside {
+    flex: 1; /* Take up 1/4 of the available space */
+    background-color: rgba(79, 102, 57, 0.8); /* Darker sidebar background with 80% opacity */
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px #333;
+}
+
+ul {
+    list-style: url('images/hearth.png');
+    padding-left: 30px;
+}
+footer {
+    background-color: #556b2f; /* Moss green footer background */
+    color: #fff; /* White text */
+    padding: 1em;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.flex {
+    display:flex;
+}

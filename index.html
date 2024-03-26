@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="images/lmao.jpg" rel="icon" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Moss' Domain</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="lastfm.js"></script>
+    <script src="visitor.js"></script>
+</head>
+
+<body>
+<div id="container">
+
+    <div id="headerArea">
+        <div id="header">
+            <h1>MOSS' DOMAIN</h1>
+        </div>
+        <nav id="navbar">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="cats">Cats</a></li>
+                <li><a href="apod">APoD</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="flex">
+
+        <main>
+            <h2>uhhhhh hi :3</h2>
+            <p>You are visitor: <span class="view-counter"></span></p>
+            <p>Hi my name is moss, my pronouns are they/them and I love my cats, they help me stay sane.</p>
+            <p>I'm a physics student and I really like programming. <br>
+                the games im currently enjoying are:
+            <ul>
+                <li>Hollow Knight</li>
+                <li>Minecraft</li>
+                <li>Lethal company</li>
+            </ul>
+            </p>
+            <h3>You guys can chat here :3</h3>
+            <p>
+                Stay friendly here or I will explode
+            </p>
+            <iframe src="https://www5.cbox.ws/box/?boxid=949913&boxtag=ouWEAx"
+                    width="100%" height="450" allowtransparency="yes"
+                    allow="autoplay" frameborder="0" marginheight="0"
+                    marginwidth="0" scrolling="auto"></iframe>
+
+        </main>
+
+        <aside id="rightSidebar"><h2>Socials</h2>
+            <div class="box">
+                <p>
+                <ul>
+                    <li><a href="https://www.tumblr.com/blog/mossizprypjat">Tumblr</a></li>
+                    <li><a href="https://twitter.com/27Froggys">Twitter (eww)</a></li>
+                    <li><a href="https://github.com/mossizprypjat">GitHub</a></li>
+                    <li><a href="https://qoto.org/web/accounts/799827">Mastodon</a></li>
+                </ul>
+            </div>
+            <h2>Last played song</h2>
+            <div id="lastPlayed"></div>
+        </aside>
+    </div>
+
+    <footer id="footer">
+        <p>You are visitor: <span class="view-counter"></span></p>
+    </footer>
+</div>
+<script src="visitor.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+    let socket = io();
+
+    let form = document.getElementById('form');
+    let myname = document.getElementById('myname');
+    let message = document.getElementById('message');
+    let messageArea = document.getElementById('messageArea');
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        if (message.value) {
+            socket.emit('send name', myname.value);
+            socket.emit('send message', message.value);
+            message.value = '';
+        }
+    });
+
+    socket.on('send name', (username) => {
+        let name = document.createElement('p');
+        name.classList.add('message');
+        name.innerHTML = `<span class="username">${username}:</span>`;
+        messageArea.appendChild(name);
+    });
+
+    socket.on('send message', (chat) => {
+        let chatContent = document.createElement('p');
+        chatContent.classList.add('message');
+        chatContent.textContent = chat;
+        messageArea.appendChild(chatContent);
+    });
+</script>
+</body>
+</html>

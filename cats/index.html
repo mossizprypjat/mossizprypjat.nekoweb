@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="../images/lmao.jpg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CATS</title>
+    <link rel="stylesheet" href="cats.css">
+    <script src="cats.js"></script>
+</head>
+
+<body>
+<div id="container">
+
+    <div id="headerArea">
+        <div id="header">
+            <h1>My 2 silly cats</h1>
+        </div>
+        <nav id="navbar">
+            <ul>
+                <li><a href="../home/">Home</a></li>
+                <li><a href="../cats/">Cats</a></li>
+                <li><a href="../apod/">APoD</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="flex">
+
+        <main>
+            <p>
+                This page is made for me to learn javascript <br>
+                My Cats in full screen:
+            </p>
+            <!-- The dots/circles -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+            <div class="slideshow-container">
+
+                <!-- Full-width images with number and caption text -->
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 4</div>
+                    <img src="../images/cats.jpg" style="width:100%">
+                    <div class="text">Bonnie and Milou</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 4</div>
+                    <img src="../images/snacks.jpg" style="width:100%">
+                    <div class="text">Milou always likes a snack</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 4</div>
+                    <img src="../images/stinky2.png" style="width:100%">
+                    <div class="text">Don't worry Milou is a clean boy</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">4 / 4</div>
+                    <img src="../images/lmao.jpg" style="width:100%">
+                    <div class="text">Bonnie is just a silly guy</div>
+                </div>
+
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <p> My cats in a gallery:</p>
+            <div class="row">
+                <div class="column">
+                    <img alt="my 2 cute cats" src="../images/cats.jpg"><br>
+                    <img alt="he's always hungry" src="../images/snacks.jpg">
+                    <img alt="laughing my tail off" src="../images/lmao.jpg">
+                </div>
+                <div class="column">
+                    <img alt="don't worry he's a clean boy" src="../images/stinky.jpg">
+                </div>
+            </div>
+            <br>
+
+        </main>
+
+        <aside id="rightSidebar"><h2>Socials</h2>
+            <div class="box">
+                <p>
+                <ul>
+                    <li><a href="https://www.tumblr.com/blog/mossizprypjat">Tumblr</a></li>
+                    <li><a href="https://twitter.com/27Froggys">Twitter (eww)</a></li>
+                    <li><a href="https://github.com/mossizprypjat">GitHub</a></li>
+                    <li><a href="https://qoto.org/web/accounts/799827">Mastodon</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <footer id="footer">
+        <p>You are visitor: <span class="view-counter"></span></p>
+    </footer>
+</div>
+<script src="../visitor.js"></script>
+</body>
+</html>
