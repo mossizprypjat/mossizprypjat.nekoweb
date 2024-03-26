@@ -139,3 +139,4 @@ cmake-build-debug/
 # nekoweb
 test/
 qodana.yaml
+encryption.py
