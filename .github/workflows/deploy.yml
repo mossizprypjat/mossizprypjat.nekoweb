@@ -27,4 +27,3 @@ jobs:
           CLEANUP: 'False'
           DELAY: '0.5'
           NEKOWEB_PAGENAME: 'mossizprypjat'
-          ENCRYPTION_KEY: ${{ secrets.NEKOWEB_ENCRYPTION_KEY }}
