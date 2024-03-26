@@ -110,7 +110,7 @@ body {
 if you want to style them separately,
 create styles for #leftSidebar and #rightSidebar */
 aside {
-    background-color: #b67295;
+    background-color: #be81a1;
     width: 200px;
     padding: 20px;
     font-size: smaller;
