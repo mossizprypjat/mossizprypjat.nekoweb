@@ -135,3 +135,6 @@ dmypy.json
 # c++
 CMakeLists.txt
 cmake-build-debug/
+
+# nekoweb
+test/
