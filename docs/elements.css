@@ -5,7 +5,7 @@
     text-align: center;
     background-image: url(https://mossizprypjat.nekoweb.org/images/greenpath.png); /* Only nekoweb URLs allowed, use full url to your site like https://example.nekoweb.org/images/coolbg.png */
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: auto;
     color: #3a4820;
     font-size: 12px;
 }
