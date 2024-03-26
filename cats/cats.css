@@ -1,4 +1,3 @@
-
 @font-face {
     font-family: "Minecraft";
     src: url("../Minecraft.ttf") format("truetype");
@@ -152,9 +151,10 @@ footer {
     /* this centers the footer text */
 }
 
-h1{
+h1 {
     color: #709874;
 }
+
 h2,
 h3 {
     color: #bbfdc1;

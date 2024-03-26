@@ -1,7 +1,7 @@
 const pageviewsCount = document.getElementById('pageviews-count');
 const visitsCount = document.getElementById('visits-count');
 
-if (sessionStorage.getItem('visit') === null){
+if (sessionStorage.getItem('visit') === null) {
     // yippee nieuwe visitor
     updateCounter('type=visitor-pageview');
 } else {
@@ -9,10 +9,10 @@ if (sessionStorage.getItem('visit') === null){
     updateCounter('type=pageview');
 }
 
-function updateCounter(type){
-    fetch('http://localhost?'+type)
+function updateCounter(type) {
+    fetch('http://localhost?' + type)
         .then(res => res.json())
-        .then(data =>{
+        .then(data => {
             pageviewsCount.textContent = data.pageviews;
             visitsCount.textContent = data.visits;
         })

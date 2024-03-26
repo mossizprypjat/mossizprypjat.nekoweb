@@ -9,7 +9,7 @@ body {
     padding: 0;
     color: #fff; /* Light text */
     background: url('images/webb_background.png');
-    background-size:cover;
+    background-size: cover;
 }
 
 header {
@@ -46,6 +46,7 @@ ul {
     list-style: url('images/hearth.png');
     padding-left: 30px;
 }
+
 footer {
     background-color: #556b2f; /* Moss green footer background */
     color: #fff; /* White text */
@@ -57,5 +58,5 @@ footer {
 }
 
 .flex {
-    display:flex;
+    display: flex;
 }
