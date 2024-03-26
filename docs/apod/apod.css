@@ -9,7 +9,7 @@ the images as variables */
 :root {
 
     /* colors */
-    --content: #32411e;
+    --content: #1e1e1e;
 }
 
 /* if you have the URL of a font, you can set it below */
@@ -34,9 +34,9 @@ body {
     /* you can delete the line below if you'd prefer to not use an image */
     background-size: cover;
     background-repeat: no-repeat;
-    color: #fceaff;
-    background-color: #556b2f;
-    background-image: url("../images/greenpath2.jpg");
+    color: #ffffff;
+    background-color: #2d2d30;
+    background-image: url("../images/abyss.png");
 }
 
 * {
@@ -91,7 +91,7 @@ EXCEPT for the navigation */
 /* navigation section!! */
 #navbar {
     height: 40px;
-    background-color: #32411e;
+    background-color: #1e1e1e;
     /* navbar color */
     width: 100%;
 }
@@ -152,7 +152,7 @@ EXCEPT for the navigation */
 if you want to style them separately,
 create styles for #leftSidebar and #rightSidebar */
 aside {
-    background-color: #4F6639F2;
+    background-color: #1e1e1e;
     width: 200px;
     padding: 20px;
     font-size: smaller;
@@ -163,7 +163,7 @@ aside {
 /* this is the color of the main content area,
 between the sidebars! */
 main {
-    background-color: #556B2FF2;
+    background-color: #2d2d30;
     flex: 1;
     padding: 20px;
     order: 2;
@@ -184,7 +184,7 @@ left sidebar is 1, content is 2, and right sidebar is 3! */
 }
 
 footer {
-    background-color: #32411e;
+    background-color: #1e1e1e;
     /* background color for footer */
     width: 100%;
     height: 50px;
@@ -196,7 +196,7 @@ footer {
 h1,
 h2,
 h3 {
-    color: #ffffff;
+    color: #f9ceff;
 }
 
 h1 {
@@ -205,13 +205,13 @@ h1 {
 
 strong {
     /* this styles bold text */
-    color: #ffffff;
+    color: #fceaff;
 }
 
 /* this is just a cool box, it's the darker colored one */
 box {
-    background-color: #32411e;
-    border: 1px solid #556B2FFF;
+    background-color: #1e1e1e;
+    border: 1px solid #2d2d30;
     padding: 10px;
 }
 
@@ -222,7 +222,7 @@ box {
     height: 30px;
     padding: 10px;
     font-size: smaller;
-    background-color: #4F6639F2;
+    background-color: #2d2d30;
 }
 
 
@@ -395,7 +395,7 @@ and then subtrack it by 100. use this new number as the
 }
 
 #lastPlayed {
-    background-color: #3a4820;
+    background-color: #1e1e1e;
     box-shadow: 0 2px 4px rgb(0, 0, 0);
     padding: 20px;
     max-width: 300px;
