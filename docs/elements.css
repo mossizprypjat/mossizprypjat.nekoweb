@@ -24,7 +24,8 @@
 
 .site-box > a > span::after {
     visibility: visible;
-    content: "\A I have picture of my cats, and the astronomy picture of the day";
+    color: #566e32;
+    content: "I have picture of my cats, and the astronomy picture of the day";
     text-align: center;
 }
 
