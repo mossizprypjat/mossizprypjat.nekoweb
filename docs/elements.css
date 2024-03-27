@@ -18,7 +18,7 @@
 }
 
 .site-box > a > span {
-    color: #546b30;
+    visibility: hidden;
 }
 
 
