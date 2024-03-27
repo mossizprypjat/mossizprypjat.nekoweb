@@ -24,7 +24,7 @@
 
 .site-box > a > span::after {
     visibility: visible;
-    content: "I have picture of my cats, and the astronomy picture of the day";
+    content: "\A I have picture of my cats, and the astronomy picture of the day";
     text-align: center;
 }
 
