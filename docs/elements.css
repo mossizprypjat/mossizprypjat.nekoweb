@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Minecraft";
+    src: url("Minecraft.ttf") format("truetype");
+}
+
 .site-box {
     text-align: center;
     background-image: url(https://mossizprypjat.nekoweb.org/images/cat-blink.gif); /* Only nekoweb URLs allowed, use full url to your site like https://example.nekoweb.org/images/coolbg.png */
@@ -5,10 +10,13 @@
     background-size: auto;
     color: #d2a9be;
     font-size: 12px;
+    text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+    1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
 }
 
 .site-box > a > p {
     color: #242d14;
+    margin:3em 1em;
     font-weight: bold;
     text-align: center;
 
