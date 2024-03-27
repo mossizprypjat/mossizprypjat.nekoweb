@@ -25,9 +25,7 @@
 .site-box > a > span::after {
     visibility: visible;
     content: "I have picture of my cats, and the astronomy picture of the day";
-    position: absolute;
-    left: 85px;
-    bottom: 50px;
+    text-align: center;
 }
 
 .site-box .sitefeature {
