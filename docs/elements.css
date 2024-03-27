@@ -4,6 +4,7 @@
 }
 
 .site-box {
+    font-family: 'Minecraft', sans-serif;
     text-align: center;
     background-image: url(https://mossizprypjat.nekoweb.org/images/cat-blink.gif); /* Only nekoweb URLs allowed, use full url to your site like https://example.nekoweb.org/images/coolbg.png */
     background-repeat: no-repeat;
@@ -25,6 +26,14 @@
 .site-box > a > span {
     color: #3a4820;
 }
+
+
+.site-box > a > span::after {
+    visibility: visible;
+    content: "This is my personal website for fun. I have picture of my cats, and the astronomy picture of the day";
+    position: absolute;
+    left: 85px;
+    bottom: 50px;
 
 .site-box .sitefeature {
     display:none;
