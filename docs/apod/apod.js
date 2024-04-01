@@ -30,6 +30,7 @@ $(document).ready(function () {
         const inputDate = $('#date-input').val();
         const selectedDate = new Date(inputDate);
         if (!isNaN(selectedDate.getTime())) {
+            currentDate = selectedDate;
             fetchApod(selectedDate);
         } else {
             alert("Please enter a valid date in the format YYYY-MM-DD.");
