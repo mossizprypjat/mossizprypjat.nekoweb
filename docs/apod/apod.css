@@ -268,3 +268,32 @@ and then subtrack it by 100. use this new number as the
 * {
     box-sizing: border-box
 }
+
+/* buttons */
+.button {
+    background-color: #242B33;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.button:hover {
+    background-color: #37404A;
+}
+
+/* Additional styling for specific buttons */
+#fetch-button {
+    background-color: #BDBDBD;
+    color: #242B33;
+}
+
+#prev-button, #next-button {
+    background-color: #BDBDBD;
+}

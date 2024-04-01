@@ -35,4 +35,14 @@ $(document).ready(function () {
             alert("Please enter a valid date in the format YYYY-MM-DD.");
         }
     });
+
+    $('#prev-button').click(function () {
+        currentDate.setDate(currentDate.getDate() - 1);
+        fetchApod(currentDate);
+    });
+
+    $('#next-button').click(function () {
+        currentDate.setDate(currentDate.getDate() + 1);
+        fetchApod(currentDate);
+    });
 });

@@ -1,37 +1,11 @@
-/* user styles */
-
-/* styles are what change the color and sizes of stuff on your site. */
-
-/* these are variables that are being used in the code
-these tended to confuse some people, so I only kept
-the images as variables */
-
-:root {
-
-    /* colors */
-    --content: #32411e;
-}
-
-/* if you have the URL of a font, you can set it below */
-/* feel free to delete this if it's not your vibe */
-
-/* this seems like a lot for just one font and I would have to agree
-but I wanted to include an example of how to include a custom font.
-If you download a font file you can upload it onto your Neocities
-and then link it! Many fonts have separate files for each style
-(bold, italic, etc. T_T) which is why there are so many!
-*/
-
 @font-face {
     font-family: "Minecraft";
     src: url("Minecraft.ttf") format("truetype");
 }
 
-
 body {
     font-family: 'Minecraft', sans-serif;
     margin: 0;
-    /* you can delete the line below if you'd prefer to not use an image */
     background-size: cover;
     background-repeat: no-repeat;
     color: #fceaff;
@@ -45,22 +19,9 @@ body {
 
 /* below this line is CSS for the layout */
 
-/* this is a CSS comment
-to uncomment a line of CSS, remove the * and the /
-before and after the text */
-
-
-/* the "container" is what wraps your entire website */
-/* if you want something (like the header) to be Wider than
-the other elements, you will need to move that div outside
-of the container */
 #container {
     max-width: 70%;
-    /* this is the width of your layout! */
-    /* if you change the above value, scroll to the bottom
-    and change the media query according to the comment! */
     margin: 0 auto;
-    /* this centers the entire page */
 }
 
 /* the area below is for all links on your page
