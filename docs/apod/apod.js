@@ -11,10 +11,12 @@ function fetchApod(date) {
         success: function (data) {
             const imageUrl = data.url;
             const title = data.title;
+            const date = data.date;
             const explanation = data.explanation;
 
             $('#apod-image').attr('src', imageUrl);
             $('#apod-title').text(title);
+            $('#apod-date').text(date);
             $('#apod-explanation').text(explanation);
         },
         error: function (error) {
