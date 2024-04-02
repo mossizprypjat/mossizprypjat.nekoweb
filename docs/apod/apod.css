@@ -66,7 +66,7 @@ of the container */
 /* the area below is for all links on your page
 EXCEPT for the navigation */
 #container a {
-    color: #1f1f1f;
+    color: #ffffff;
     font-weight: bold;
     /* if you want to remove the underline
     you can add a line below here that says:
