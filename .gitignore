@@ -3,3 +3,4 @@ test/
 qodana.yaml
 encryption.py
 .idea
+config.ini

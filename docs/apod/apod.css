@@ -297,3 +297,9 @@ and then subtrack it by 100. use this new number as the
 #prev-button, #next-button {
     background-color: #BDBDBD;
 }
+
+#note {
+    font-size: small;
+    color: #707079;
+
+}
