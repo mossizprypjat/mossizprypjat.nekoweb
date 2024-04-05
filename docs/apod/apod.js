@@ -21,6 +21,7 @@ function fetchApod(date) {
         },
         error: function (error) {
             console.error('Error fetching APoD:', error);
+            alert('Error fetching APoD: ' + JSON.parse(error.responseText).msg + '😿😿😿');
         }
     });
 }
