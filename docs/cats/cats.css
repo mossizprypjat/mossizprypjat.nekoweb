@@ -174,7 +174,7 @@ box {
     display: inline-block;
     background-color: #b67295;
     border: 1px solid #672c3e;
-    padding: 2px;
+    padding: 1px;
     color: #e5ffe6;
 }
 
@@ -374,13 +374,16 @@ button:hover {
     background-image: url("../images/catbutton_onclick.png");
 }
 
-#right {
-    width: 100%;
+#button-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
 }
-#left {
-    width: 100%;
-}
-table {
-    margin: 0 auto;
-    padding: 0;
+
+@media screen and (min-width: 768px) {
+    #button-container {
+        flex-direction: row; /* Arrange elements horizontally */
+        align-items: center; /* Align items to the center vertically */
+    }
 }
