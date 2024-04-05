@@ -174,7 +174,7 @@ box {
     display: inline-block;
     background-color: #b67295;
     border: 1px solid #672c3e;
-    padding: 10px;
+    padding: 2px;
     color: #e5ffe6;
 }
 
@@ -365,17 +365,13 @@ button {
     border: 2px;
     padding: 37px 20px;
     text-align: center;
-    font-size: 25px;
+    font-size: 20px;
     text-shadow: 2px 0 #000000, -2px 0 #000000, 0 2px #000000, 0 -2px #000000,
     1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
 }
 
 button:hover {
     background-image: url("../images/catbutton_onclick.png");
-}
-
-block {
-    display: inline-block;
 }
 
 #right {
