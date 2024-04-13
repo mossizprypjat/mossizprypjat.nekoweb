@@ -1,6 +1,6 @@
 let url = "https://catfact.ninja/fact";
 
-function catfactBtn_pressed(){
+function catfactBtn_pressed() {
     $.ajax({
         url: url,
         method: 'GET',
@@ -18,7 +18,7 @@ function catfactBtn_pressed(){
 $(document).ready(function () {
     catfactBtn_pressed();
 
-    $('#catfact-button').click(function (){
+    $('#catfact-button').click(function () {
         catfactBtn_pressed();
     })
 })

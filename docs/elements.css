@@ -11,7 +11,7 @@
 
 .site-box > a > p {
     color: #3f5024;
-    margin:3em 1em;
+    margin: 3em 1em;
     font-weight: bold;
     text-align: center;
 
@@ -30,5 +30,5 @@
 }
 
 .site-box .sitefeature {
-    display:none;
+    display: none;
 }
