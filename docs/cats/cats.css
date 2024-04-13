@@ -12,6 +12,11 @@ body {
     color: #678a6a;
     background-color: #f6cde2;
     background-image: url("../images/pastel_gif_minecraft.png");
+    cursor: url("docs/images/cursor.png"), auto;
+}
+
+body:active {
+    cursor: url("docs/images/cursor.png"), auto;
 }
 
 * {
