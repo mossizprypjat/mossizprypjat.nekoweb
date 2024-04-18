@@ -1,7 +1,7 @@
 const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
 
 function getCurrent() {
-    return fetch("https://xkcd.com/info.0.json")
+    return fetch(proxyUrl + "https://xkcd.com/info.0.json")
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -16,7 +16,7 @@ function getCurrent() {
 }
 
 function getComic(number) {
-    let customUrl = `https://xkcd.com/${number}/info.0.json`;
+    let customUrl = `${proxyUrl}https://xkcd.com/${number}/info.0.json`;
     fetch(customUrl)
         .then(response => {
             if (!response.ok) {
