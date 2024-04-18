@@ -1,4 +1,4 @@
-// apod.js
+// space.js
 const apiKey = "WQxpeAqkAEeQbMEdHbOXyxK68ERKjUa33TbhGPYA";
 let apiUrl = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`;
 let currentDate = new Date();
