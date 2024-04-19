@@ -7,7 +7,6 @@
     <title>Moss' Domain</title>
     <link href="../apod.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="xkcd.js"></script>
     <script src="../mars.js"></script>
 </head>
 
@@ -16,7 +15,7 @@
 
     <div id="headerArea">
         <div id="header">
-            <h1>XKCD comic</h1>
+            <h1>Mars data</h1>
         </div>
         <nav id="navbar">
             <ul>
@@ -24,13 +23,13 @@
                 <li><a href="../../cats">Cats</a></li>
                 <li>
                     <div class="dropdown">
-                    <button class="dropbtn">Space</button>
-                    <div class="dropdown-content">
-                        <a href="../">APoD</a>
-                        <a href="../XKCD">XKCD</a>
-                        <a href="../mars">Mars Data</a>
+                        <button class="dropbtn">Space</button>
+                        <div class="dropdown-content">
+                            <a href="../">APoD</a>
+                            <a href="../XKCD">XKCD</a>
+                            <a href="../mars">Mars Data</a>
+                        </div>
                     </div>
-                </div>
                 </li>
             </ul>
         </nav>
@@ -39,22 +38,17 @@
     <div id="flex">
 
         <main>
-            <div>
-                <label for="number-input">Enter Number:</label>
-                <input id="number-input" placeholder="xxx" type="text">
-                <button id="fetch-button">Show</button>
-                <br>
-
-                <button id="prev-button">Previous</button>
-                <button id="next-button">Next</button>
+            <h1>Weather</h1>
+            <div class="box">
+                <p>Date: <span id="sol-date"></span></p>
+                <p>Min Temp: <span id="min-temp"></span> °C</p>
+                <p>Max Temp: <span id="max-temp"></span> °C</p>
+                <p>Pressure: <span id="pressure"></span> Pa</p>
+                <p>Wind Speed: <span id="wind-speed"></span> m/s</p>
+                <p>Atmosphere: <span id="atmosphere"></span></p>
+                <p>Sunrise: <span id="sunrise"></span> and sunset: <span id="sunset"></span></p>
+                <p>UV-index: <span id="uvIndex"></span></p>
             </div>
-
-            <h2 id="xkcd-title"></h2>
-            <img alt="xkcd comic" id="xkcd-image" width="100%">
-            <p id="xkcd-date"></p>
-            <p id="xkcd-transcript"></p>
-            <p id="xkcd-alt">
-            </p>
         </main>
 
 
@@ -70,21 +64,11 @@
                 </ul>
             </div>
             <h2> Weather on Mars</h2>
-            <div class="box">
-                <p>Date: <span id="sol-date"></span></p>
-                <p>Min Temp: <span id="min-temp"></span> °C</p>
-                <p>Max Temp: <span id="max-temp"></span> °C</p>
-                <p>Pressure: <span id="pressure"></span> Pa</p>
-                <p>Wind Speed: <span id="wind-speed"></span> m/s</p>
-                <p>Atmosphere: <span id="atmosphere"></span></p>
-                <p>Sunrise: <span id="sunrise"></span> and sunset: <span id="sunset"></span></p>
-                <p>UV-index: <span id="uvIndex"></span></p>
-            </div>
+
 
             <h3>Sources:</h3>
             <p>
             <ul>
-                <li><a href="https://xkcd.com/info.0.json">XKCD comic</a></li>
                 <li><a href="https://mars.nasa.gov/rss/api/?feed=weather&category=msl&feedtype=json"> Mars Weather</a>
                 </li>
             </ul>
