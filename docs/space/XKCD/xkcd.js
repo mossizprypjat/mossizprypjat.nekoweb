@@ -1,7 +1,5 @@
-const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
-
 function getCurrent() {
-    return fetch(proxyUrl + "https://xkcd.com/info.0.json")
+    return fetch("https://xkcd.vercel.app/?comic=latest")
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -16,7 +14,7 @@ function getCurrent() {
 }
 
 function getComic(number) {
-    let customUrl = `${proxyUrl}https://xkcd.com/${number}/info.0.json`;
+    let customUrl = `https://xkcd.vercel.app/?comic=${number}`;
     fetch(customUrl)
         .then(response => {
             if (!response.ok) {
