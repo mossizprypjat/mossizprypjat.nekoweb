@@ -29,7 +29,7 @@ function fetchApod(date) {
 $(document).ready(function () {
     fetchApod(currentDate); // Fetch the APoD for the current date
 
-    $('#fetch-button').click(function () {
+    function fetchApodFromInput() {
         const inputDate = $('#date-input').val();
         const selectedDate = new Date(inputDate);
         if (!isNaN(selectedDate.getTime())) {
@@ -37,6 +37,17 @@ $(document).ready(function () {
             fetchApod(selectedDate);
         } else {
             alert("Please enter a valid date in the format YYYY-MM-DD.");
+        }
+    }
+
+// Click event for the button
+    $('#fetch-button').click(fetchApodFromInput);
+
+// Keypress event for the input field
+    $(document).keypress(function(event) {
+        // Check if the pressed key is Enter
+        if (event.keyCode === 13) {
+            fetchApodFromInput();
         }
     });
 
