@@ -1,0 +1,247 @@
+@font-face {
+    font-family: "Minecraft";
+    src: url("../Minecraft.ttf") format("truetype");
+}
+
+body {
+    font-family: 'Minecraft', sans-serif;
+    margin: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fceaff;
+    background-color: #556b2f;
+    background-image: url("../images/greenpath2.jpg");
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* below this line is CSS for the layout */
+
+#container {
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+/* the area below is for all links on your page
+EXCEPT for the navigation */
+#container a {
+    color: #1f1f1f;
+    font-weight: bold;
+    /* if you want to remove the underline
+    you can add a line below here that says:
+    text-decoration:none; */
+}
+
+#header {
+    width: 100%;
+    background-color: rgba(85, 107, 47, 0);
+    /* header color here! */
+    height: 150px;
+    /* this is only for a background image! */
+    /* if you want to put images IN the header,
+    you can add them directly to the <div id="header"></div> element! */
+    /*background-image: url("images/greenpath.png");*/
+    background-size: 100%;
+    padding: 3em;
+    font-size: large;
+    text-align: center;
+}
+
+/* navigation section!! */
+#navbar {
+    height: 40px;
+    background-color: #32411e;
+    /* navbar color */
+    width: 100%;
+}
+
+#navbar ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    justify-content: space-evenly;
+    list-style: url('../images/hearth.png');
+}
+
+#navbar li {
+    padding-top: 10px;
+}
+
+/* navigation links*/
+#navbar li a {
+    color: #fceaff;
+    /* navbar text color */
+    font-weight: 800;
+    text-decoration: none;
+    /* this removes the underline */
+}
+
+/* navigation link when a link is hovered over */
+#navbar li a:hover {
+    color: #9d9d9d;
+    text-decoration: underline;
+}
+
+#flex {
+    display: flex;
+}
+
+
+#flex ul {
+    padding: 0;
+    margin: 30px;
+    list-style: url('../images/hearth.png');
+}
+
+#flex li a {
+    color: #fceaff;
+    /* navbar text color */
+    font-weight: 800;
+    text-decoration: none;
+    /* this removes the underline */
+}
+
+/* navigation link when a link is hovered over */
+#flex li a:hover {
+    color: #9d9d9d;
+    text-decoration: underline;
+}
+
+/* this colors BOTH sidebars
+if you want to style them separately,
+create styles for #leftSidebar and #rightSidebar */
+aside {
+    background-color: #4F6639F2;
+    width: 200px;
+    padding: 20px;
+    font-size: smaller;
+    /* this makes the sidebar text slightly smaller */
+}
+
+
+/* this is the color of the main content area,
+between the sidebars! */
+main {
+    background-color: #556B2FF2;
+    flex: 1;
+    padding: 20px;
+    order: 2;
+}
+
+/* what's this "order" stuff about??
+allow me to explain!
+if you're using both sidebars, the "order" value
+tells the CSS the order in which to display them.
+left sidebar is 1, content is 2, and right sidebar is 3! */
+
+#leftSidebar {
+    order: 1;
+}
+
+#rightSidebar {
+    order: 3;
+}
+
+footer {
+    background-color: #32411e;
+    /* background color for footer */
+    width: 100%;
+    height: 50px;
+    padding: 3px;
+    text-align: center;
+    /* this centers the footer text */
+}
+
+h1,
+h2,
+h3 {
+    color: #ffffff;
+}
+
+h1 {
+    font-size: 25px;
+}
+
+strong {
+    /* this styles bold text */
+    color: #ffffff;
+}
+
+/* this is just a cool box, it's the darker colored one */
+box {
+    background-color: #32411e;
+    border: 1px solid #556B2FFF;
+    padding: 10px;
+}
+
+/* CSS for extras */
+
+#topBar {
+    width: 100%;
+    height: 30px;
+    padding: 10px;
+    font-size: smaller;
+    background-color: #4F6639F2;
+}
+
+
+/* BELOW THIS POINT IS MEDIA QUERY */
+
+/* so you wanna change the width of your page?
+by default, the container width is 900px.
+in order to keep things responsive, take your new height,
+and then subtrack it by 100. use this new number as the
+"max-width" value below
+   */
+
+@media only screen and (max-width: 1200px) {
+    #flex {
+        flex-wrap: wrap;
+    }
+
+    aside {
+        width: 100%;
+    }
+
+    /* the order of the items is adjusted here for responsiveness!
+      since the sidebars would be too small on a mobile device.
+      feel free to play around with the order!
+      */
+    main {
+        order: 1;
+    }
+
+    #leftSidebar {
+        order: 2;
+    }
+
+    #rightSidebar {
+        order: 3;
+    }
+
+    #navbar ul {
+        flex-wrap: wrap;
+    }
+}
+
+* {
+    box-sizing: border-box
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    .column {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+}

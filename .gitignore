@@ -4,3 +4,6 @@ qodana.yaml
 encryption.py
 .idea
 config.ini
+
+docs/blog/index.html
+docs/blog/posts.json

@@ -40,10 +40,10 @@ $(document).ready(function () {
         }
     }
 
-// Click event for the button
+    // Click event for the button
     $('#fetch-button').click(fetchApodFromInput);
 
-// Keypress event for the input field
+    // Keypress event for the input field
     $(document).keypress(function(event) {
         // Check if the pressed key is Enter
         if (event.keyCode === 13) {
