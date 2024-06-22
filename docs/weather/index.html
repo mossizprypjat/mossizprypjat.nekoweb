@@ -5,10 +5,9 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Moss' Domain</title>
-    <link href="apod.css" rel="stylesheet">
+    <link href="sun.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="apod.js"></script>
-    <script src="mars.js"></script>
+    <script src="weather.js"></script>
 </head>
 
 <body>
@@ -16,23 +15,15 @@
 
     <div id="headerArea">
         <div id="header">
-            <h1>Astronomy Picture of the Day</h1>
+            <h1>Weather (work in progress)</h1>
         </div>
         <nav id="navbar">
             <ul>
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="../cats">Cats</a></li>
-                <li>
-                    <div class="dropdown">
-                    <button class="dropbtn">Space</button>
-                    <div class="dropdown-content">
-                        <a href="">APoD</a>
-                        <a href="XKCD">XKCD</a>
-                        <a href="mars">Mars Data</a>
-                    </div>
-                </div>
-                </li>
+                <li><a href="../space">Space</a></li>
                 <li><a href="../weather">Weather</a></li>
+
             </ul>
         </nav>
     </div>
@@ -41,34 +32,28 @@
 
         <main>
             <div>
-                <label for="date-input">Enter Date (YYYY-MM-DD):</label>
-                <input id="date-input" placeholder="YYYY-MM-DD" type="text">
-                <button id="fetch-button">Show</button>
+                <button id="location-button">Your Location</button> or
+                <label for="location-input">Enter Location:</label>
+                <input id="location-input" placeholder="Earth" type="text">
+
                 <br>
 
-                <button id="prev-button">Previous</button>
-                <button id="next-button">Next</button>
+                <input type="radio" id="minutely" name="timespan" value="minutely">
+                <label for="minutely">minutely</label><br>
+                <input type="radio" id="hourly" name="timespan" value="hourly" checked >
+                <label for="hourly">hourly</label><br>
+                <input type="radio" id="daily" name="timespan" value="daily">
+                <label for="daily">daily</label><br>
+                <button id="fetch-button">Show</button>
             </div>
+            <h1>Weather Forecast at <span id="location-name"></span></h1>
+            <div id="weather"></div>
 
-            <h2 id="apod-title"></h2>
-            <img alt="Astronomy Picture of the Day" id="apod-image" width="100%">
-            <p id="apod-date"></p>
-            <p id="apod-explanation"></p>
-            </p>
+
         </main>
 
 
         <aside id="rightSidebar">
-            <h2>Socials</h2>
-            <div class="box">
-                <p>
-                <ul>
-                    <li><a href="https://mossizprypjat.tumblr.com/">Tumblr</a></li>
-                    <li><a href="https://twitter.com/27Froggys">Twitter (eww)</a></li>
-                    <li><a href="https://github.com/mossizprypjat">GitHub</a></li>
-                    <li><a href="https://qoto.org/web/accounts/799827">Mastodon</a></li>
-                </ul>
-            </div>
             <h2> Weather on Mars</h2>
             <div class="box">
                 <p>Date: <span id="sol-date"></span></p>
@@ -84,7 +69,7 @@
             <h3>Sources:</h3>
             <p>
             <ul>
-                <li><a href="https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY">APoD</a></li>
+                <li><a href="https://www.tomorrow.io/">Weather</a></li>
                 <li><a href="https://mars.nasa.gov/rss/api/?feed=weather&category=msl&feedtype=json"> Mars Weather</a>
                 </li>
             </ul>

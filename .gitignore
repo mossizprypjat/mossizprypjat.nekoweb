@@ -7,3 +7,6 @@ config.ini
 
 docs/blog/index.html
 docs/blog/posts.json
+docs/weather/weather_test.js
+docs/weather/test.json
+docs/Bonniebot_status.js

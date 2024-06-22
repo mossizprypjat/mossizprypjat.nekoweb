@@ -9,6 +9,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="lastfm.js"></script>
     <script src="visitor.js"></script>
+    <script src="Bonniebot_status.js"></script>
 </head>
 
 <body>
@@ -23,6 +24,7 @@
                 <li><a href="/">Home</a></li>
                 <li><a href="cats">Cats</a></li>
                 <li><a href="space">Space</a></li>
+                <li><a href="weather">Weather</a></li>
             </ul>
         </nav>
     </div>
@@ -70,9 +72,10 @@
             <h2>Last played song</h2>
             <div id="lastPlayed"></div>
             <h2>BonnieBot status</h2>
-            <iframe height="200px" src="https://bonniebot-py.glitch.me/" style="transform: scale(0.7);"
-                    width="120%"></iframe>
 
+            <iframe id="bonniebot status" height="200px" src="https://bonniebot-py.glitch.me/" style="transform: scale(0.7);"
+                    width="120%"></iframe>
+            <span id="BonniebotStatus"></span>
         </aside>
     </div>
 
