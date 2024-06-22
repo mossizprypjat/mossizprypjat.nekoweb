@@ -1,4 +1,4 @@
-function fetchWeather() {
+function fetchMarsWeather() {
     const Url = `https://mars.nasa.gov/rss/api/?feed=weather&category=msl&feedtype=json`;
 
     $.ajax({
@@ -43,5 +43,5 @@ function fetchWeather() {
 }
 
 $(document).ready(function () {
-    fetchWeather();
+    fetchMarsWeather();
 });
