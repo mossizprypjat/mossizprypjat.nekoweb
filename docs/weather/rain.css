@@ -1,13 +1,13 @@
 
 :root {
     /* colors */
-    --dark: #4d8aff;
-    --medium: #76a0ed;
-    --lmedium: #8DB2F4FF;
-    --light: #b2cdff;
-    --text: #185561;
-    --title: #0e3139;
-    --hover: #040e10;
+    --dark: #53595F;
+    --medium: #747C84;
+    --lmedium: #959FAA;
+    --light: #A5B1BD;
+    --text: #222B33;
+    --title: #12171B;
+    --hover: #101518;
 }
 
 @font-face {
@@ -24,7 +24,7 @@ body {
     background-repeat: repeat-y;
     color: var(--text);
     background-color: var(--dark);
-    background-image: url("../images/minecraft_cloud.png");
+    background-image: url("../images/rainy_cloud.jpg");
 }
 
 * {
@@ -316,7 +316,6 @@ td {
     border: 1px solid var(--medium);
 }
 
-
 @media only screen and (max-width: 600px) {
     .hide-mobile {
         display: none;
@@ -324,9 +323,6 @@ td {
     /* Shorten header titles on mobile devices */
     th.time::before {
         content: "Time";
-    }
-    th.temperature::before {
-        content: "Temp";
     }
     th.rain::before {
         content: "Rain";
