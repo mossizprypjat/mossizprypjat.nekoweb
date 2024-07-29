@@ -7,7 +7,7 @@
     <title>Moss' Domain</title>
     <link href="sun.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="weather_test.js"></script>
+    <script src="weather.js"></script>
     <script src="../space/mars.js"></script>
 </head>
 
@@ -33,18 +33,25 @@
 
         <main>
             <div>
-                <button id="location-button">Your Location</button> or
+                <button id="location-button">Your Location</button>
+                or
                 <label for="location-input">Enter Location:</label>
                 <input id="location-input" placeholder="Earth" type="text">
 
                 <br>
 
-                <input type="radio" id="minutely" name="timespan" value="minutely">
-                <label for="minutely">minutely</label><br>
-                <input type="radio" id="hourly" name="timespan" value="hourly" checked >
-                <label for="hourly">hourly</label><br>
-                <input type="radio" id="daily" name="timespan" value="daily">
-                <label for="daily">daily</label><br>
+                <label class="radio-container">minutely
+                    <input type="radio" id="minutely" name="timespan" value="minutely">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="radio-container">hourly
+                    <input type="radio" id="hourly" name="timespan" value="hourly" checked>
+                    <span class="checkmark"></span>
+                </label>
+                <label class="radio-container">daily
+                    <input type="radio" id="daily" name="timespan" value="daily">
+                    <span class="checkmark"></span>
+                </label>
                 <button id="fetch-button">Show</button>
             </div>
             <h1>Weather Forecast at <span id="location-name"></span></h1>

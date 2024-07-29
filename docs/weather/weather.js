@@ -295,6 +295,12 @@ function fetchWeather(location) {
         method: 'GET',
         success: function (data) {
             displayWeatherData(data);
+            if (data.timelines.daily[0].values.rainAccumulationAvg > 0.5) {
+                console.log("rainy weather");
+                toggleTheme();
+            } else {
+                console.log("sunny weather");
+            }
         },
         error: function (error) {
             console.error('Error fetching weather:', error);
@@ -303,9 +309,15 @@ function fetchWeather(location) {
     });
 }
 
-function toggleTheme(weatherCode) {
-    var sheets = document.getElementsByTagName('link');
-    sheets[0].href = weatherCode;
+function toggleTheme() {
+    document.documentElement.style.cssText = "--background: url(\"../images/rainy_cloud.jpg\")";
+    document.documentElement.style.setProperty("--dark", "#53595F");
+    document.documentElement.style.setProperty("--medium", "#747C84");
+    document.documentElement.style.setProperty("--light", "#A5B1BD");
+    document.documentElement.style.setProperty("--text", "#222B33");
+    document.documentElement.style.setProperty("--title", "#12171B");
+    document.documentElement.style.setProperty("--hover", "#101518");
+    document.documentElement.style.setProperty("--lmedium", "#959FAA");
 }
 
 function displayWeatherData(data) {
