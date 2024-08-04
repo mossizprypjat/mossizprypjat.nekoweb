@@ -164,7 +164,9 @@ aside {
 between the sidebars! */
 main {
     background-color: #2d2d30;
-    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     padding: 20px;
     order: 2;
 }
@@ -355,4 +357,10 @@ dropdown menu
 .dropdown:hover .dropbtn {
     color: #9d9d9d;
     text-decoration: underline;
+}
+
+#video-container {
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
 }
