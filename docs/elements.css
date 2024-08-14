@@ -25,7 +25,7 @@
 .site-box > a > span::after {
     visibility: visible;
     color: #566e32;
-    content: "I have picture of my cats, and the astronomy picture of the day";
+    content: "I have picture of my cats, the weather forecast wherever you want, the astronomy picture of the day and a lot of other fun stuff";
     text-align: center;
 }
 
