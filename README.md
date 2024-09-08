@@ -7,3 +7,4 @@ This is made I can use GitHub actions to push to Nekoweb from my computer.
 
 - try to use this [spacetelescopelive.org](https://spacetelescopelive.org/)
 - try to use this [interactive solar system](https://eyes.nasa.gov/apps/orrery/)
+- use [GitHub.atom](https://github.com/mossizprypjat/mossizprypjat.nekoweb/commits/main.atom)  to display updates

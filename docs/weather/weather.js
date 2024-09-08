@@ -348,6 +348,15 @@ function displayWeatherData(data) {
         weatherData = $('#weather-data');
         daily.forEach(interval => {
             const time = formatDateTimeDaily(interval.time);
+            const options = {
+                day: '2-digit',
+                month: '2-digit',
+                year: 'numeric',
+                hour: '2-digit',
+            };
+            const formatter = new Intl.DateTimeFormat('en-GB', options);
+            const formattedTime = formatter.format(new Date(time));
+
             const {
                 temperatureMax,
                 temperatureMin,
@@ -361,7 +370,7 @@ function displayWeatherData(data) {
             const description = getWeatherDescription(weatherCodeMax);
             weatherData.append(`
                             <tr>
-                                <td>${time}</td>
+                                <td>${formattedTime}</td>
                                 <td>${temperatureMin}°C, ${temperatureAvg}°C, ${temperatureMax}°C</td>
                                 <td>${precipitationProbabilityAvg}%</td>
                                 <td class="hide-mobile">${Number((windSpeedAvg * 3.6).toFixed(1))} km/h</td>
@@ -393,7 +402,14 @@ function displayWeatherData(data) {
 
         weatherData = $('#weather-data');
         hourly.forEach(interval => {
-            const time = formatDateTimeHourly(interval.time);
+            const formattedTime = new Date(interval.time).toLocaleString('en-GB', {
+                day: '2-digit',
+                month: '2-digit',
+                year: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+                hour12: false
+            });
             const {
                 temperature,
                 precipitationProbability,
@@ -405,7 +421,7 @@ function displayWeatherData(data) {
             const description = getWeatherDescription(weatherCode);
             weatherData.append(`
                             <tr>
-                                <td>${time}</td>
+                                <td>${formattedTime}</td>
                                 <td>${temperature}°C</td>
                                 <td>${precipitationProbability}%</td>
                                 <td class="hide-mobile">${Number((windSpeed * 3.6).toFixed(1))} km/h</td>
@@ -438,6 +454,14 @@ function displayWeatherData(data) {
         weatherData = $('#weather-data');
         minutely.forEach(interval => {
             const time = formatDateTimeMinutely(interval.time);
+            const formattedTime = new Date(time).toLocaleString('en-GB', {
+                day: '2-digit',
+                month: '2-digit',
+                year: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+                hour12: false
+            });
             const {
                 temperature,
                 precipitationProbability,
@@ -449,7 +473,7 @@ function displayWeatherData(data) {
             const description = getWeatherDescription(weatherCode);
             weatherData.append(`
                             <tr>
-                                <td>${time}</td>
+                                <td>${formattedTime}</td>
                                 <td>${temperature}°C</td>
                                 <td>${precipitationProbability}%</td>
                                 <td class="hide-mobile">${Number((windSpeed * 3.6).toFixed(1))} km/h</td>
