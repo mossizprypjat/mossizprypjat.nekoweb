@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="../images/lmao.jpg" rel="icon" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Moss' Domain</title>
+    <link href="sun.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="weather.js"></script>
+    <script src="../space/mars.js"></script>
+</head>
+
+<body>
+<div id="container">
+
+    <div id="headerArea">
+        <div id="header">
+            <h1>Weather</h1>
+            <p>(the theme switches if it rains now :3)</p>
+        </div>
+        <nav id="navbar">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../cats">Cats</a></li>
+                <li><a href="../space">Space</a></li>
+                <li><a href="../weather">Weather</a></li>
+
+            </ul>
+        </nav>
+    </div>
+
+    <div id="flex">
+
+        <main>
+            <div>
+                <button id="location-button">Your Location</button>
+                or
+                <label for="location-input">Enter Location:</label>
+                <input id="location-input" placeholder="Earth" type="text">
+
+                <br>
+
+                <label class="radio-container">minutely
+                    <input type="radio" id="minutely" name="timespan" value="minutely">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="radio-container">hourly
+                    <input type="radio" id="hourly" name="timespan" value="hourly" checked>
+                    <span class="checkmark"></span>
+                </label>
+                <label class="radio-container">daily
+                    <input type="radio" id="daily" name="timespan" value="daily">
+                    <span class="checkmark"></span>
+                </label>
+                <button id="fetch-button">Show</button>
+            </div>
+            <h1>Weather Forecast at <span id="location-name"></span></h1>
+            <p class="display-mobile"> There is more info if you rotate your screen or on desktop!</p>
+            <div id="weather"></div>
+        </main>
+
+
+        <aside id="rightSidebar">
+            <h2> Weather on Mars</h2>
+            <div class="box">
+                <p>Date: <span id="sol-date"></span></p>
+                <p>Min Temp: <span id="min-temp"></span> °C</p>
+                <p>Max Temp: <span id="max-temp"></span> °C</p>
+                <p>Pressure: <span id="pressure"></span> Pa</p>
+                <p>Wind Speed: <span id="wind-speed"></span> m/s</p>
+                <p>Atmosphere: <span id="atmosphere"></span></p>
+                <p>Sunrise: <span id="sunrise"></span> and sunset: <span id="sunset"></span></p>
+                <p>UV-index: <span id="uvIndex"></span></p>
+            </div>
+
+            <h3>Sources:</h3>
+            <p>
+            <ul>
+                <li><a href="https://www.tomorrow.io/">Weather</a></li>
+                <li><a href="https://mars.nasa.gov/rss/api/?feed=weather&category=msl&feedtype=json"> Mars Weather</a>
+                </li>
+            </ul>
+        </aside>
+    </div>
+
+    <footer id="footer">
+        <p>You are visitor: <span class="view-counter"></span></p>
+    </footer>
+</div>
+<script src="../visitor.js"></script>
+<script src="../oneko/oneko.js"></script>
+</body>
+</html>

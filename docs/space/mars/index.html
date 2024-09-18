@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="../../images/lmao.jpg" rel="icon" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Moss' Domain</title>
+    <link href="../apod.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="../mars.js"></script>
+</head>
+
+<body>
+<div id="container">
+
+    <div id="headerArea">
+        <div id="header">
+            <h1>Mars data</h1>
+        </div>
+        <nav id="navbar">
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../cats">Cats</a></li>
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn">Space</button>
+                        <div class="dropdown-content">
+                            <a href="../">APoD</a>
+                            <a href="../XKCD">XKCD</a>
+                            <a href="../mars">Mars Data</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="../../weather">Weather</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="flex">
+
+        <main>
+            <h1>Weather</h1>
+            <div class="box">
+                <p>Date: <span id="sol-date"></span></p>
+                <p>Min Temp: <span id="min-temp"></span> °C</p>
+                <p>Max Temp: <span id="max-temp"></span> °C</p>
+                <p>Pressure: <span id="pressure"></span> Pa</p>
+                <p>Wind Speed: <span id="wind-speed"></span> m/s</p>
+                <p>Atmosphere: <span id="atmosphere"></span></p>
+                <p>Sunrise: <span id="sunrise"></span> and sunset: <span id="sunset"></span></p>
+                <p>UV-index: <span id="uvIndex"></span></p>
+            </div>
+        </main>
+
+
+        <aside id="rightSidebar">
+            <h2>Socials</h2>
+            <div class="box">
+                <p>
+                <ul>
+                    <li><a href="https://mossizprypjat.tumblr.com/">Tumblr</a></li>
+                    <li><a href="https://twitter.com/27Froggys">Twitter (eww)</a></li>
+                    <li><a href="https://github.com/mossizprypjat">GitHub</a></li>
+                    <li><a href="https://qoto.org/web/accounts/799827">Mastodon</a></li>
+                </ul>
+            </div>
+
+            <h3>Sources:</h3>
+            <p>
+            <ul>
+                <li><a href="https://mars.nasa.gov/rss/api/?feed=weather&category=msl&feedtype=json"> Mars Weather</a>
+                </li>
+            </ul>
+        </aside>
+    </div>
+
+    <footer id="footer">
+        <p>You are visitor: <span class="view-counter"></span></p>
+    </footer>
+</div>
+<script src="../../visitor.js"></script>
+<script src="../../oneko/oneko.js"></script>
+</body>
+</html>

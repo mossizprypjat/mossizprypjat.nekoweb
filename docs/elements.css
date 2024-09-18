@@ -1,19 +1,34 @@
-/* This file defines how custom elements will look like, setting CSS that breaks main nekoweb site on purpose is prohibited and may result in ban and site deletion! */
-
-/* Must start with ".site-box". Change how your website will appear on main nekoweb site: https://lune.dimden.dev/405a44b7e5.png */
 .site-box {
     text-align: center;
-    background-image: url(https://mossizprypjat.nekoweb.org/images/greenpath.jpg); /* Only nekoweb URLs allowed, use full url to your site like https://example.nekoweb.org/images/coolbg.png */
+    background-image: url(https://mossizprypjat.nekoweb.org/images/cat-blink.gif); /* Only nekoweb URLs allowed, use full url to your site like https://example.nekoweb.org/images/coolbg.png */
     background-repeat: no-repeat;
-    color: #3a4820;
+    background-size: auto;
+    color: #d2a9be;
     font-size: 12px;
+    text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+    1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
 }
 
 .site-box > a > p {
-    color: #f6cde2;
+    color: #3f5024;
+    margin: 3em 1em;
     font-weight: bold;
+    text-align: center;
+
 }
 
 .site-box > a > span {
-    color: #d2a9be;
+    visibility: hidden;
+}
+
+
+.site-box > a > span::after {
+    visibility: visible;
+    color: #566e32;
+    content: "I have picture of my cats, the weather forecast wherever you want, the astronomy picture of the day and a lot of other fun stuff";
+    text-align: center;
+}
+
+.site-box .sitefeature {
+    display: none;
 }

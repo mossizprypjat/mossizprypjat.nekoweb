@@ -1,16 +1,42 @@
+/* user styles */
+
+/* styles are what change the color and sizes of stuff on your site. */
+
+/* these are variables that are being used in the code
+these tended to confuse some people, so I only kept
+the images as variables */
+
+:root {
+
+    /* colors */
+    --content: #1e1e1e;
+}
+
+/* if you have the URL of a font, you can set it below */
+/* feel free to delete this if it's not your vibe */
+
+/* this seems like a lot for just one font and I would have to agree
+but I wanted to include an example of how to include a custom font.
+If you download a font file you can upload it onto your Neocities
+and then link it! Many fonts have separate files for each style
+(bold, italic, etc. T_T) which is why there are so many!
+*/
+
 @font-face {
     font-family: "Minecraft";
-    src: url("Minecraft.ttf") format("truetype");
+    src: url("../Minecraft.ttf") format("truetype");
 }
+
 
 body {
     font-family: 'Minecraft', sans-serif;
     margin: 0;
+    /* you can delete the line below if you'd prefer to not use an image */
     background-size: cover;
     background-repeat: no-repeat;
-    color: #fceaff;
-    background-color: #556b2f;
-    background-image: url("images/greenpath2.jpg");
+    color: #ffffff;
+    background-color: #2d2d30;
+    background-image: url("../images/abyss.png");
 }
 
 * {
@@ -19,15 +45,28 @@ body {
 
 /* below this line is CSS for the layout */
 
+/* this is a CSS comment
+to uncomment a line of CSS, remove the * and the /
+before and after the text */
+
+
+/* the "container" is what wraps your entire website */
+/* if you want something (like the header) to be Wider than
+the other elements, you will need to move that div outside
+of the container */
 #container {
     max-width: 70%;
+    /* this is the width of your layout! */
+    /* if you change the above value, scroll to the bottom
+    and change the media query according to the comment! */
     margin: 0 auto;
+    /* this centers the entire page */
 }
 
 /* the area below is for all links on your page
 EXCEPT for the navigation */
 #container a {
-    color: #1f1f1f;
+    color: #ffffff;
     font-weight: bold;
     /* if you want to remove the underline
     you can add a line below here that says:
@@ -52,7 +91,7 @@ EXCEPT for the navigation */
 /* navigation section!! */
 #navbar {
     height: 40px;
-    background-color: #32411e;
+    background-color: #1e1e1e;
     /* navbar color */
     width: 100%;
 }
@@ -62,7 +101,7 @@ EXCEPT for the navigation */
     padding: 0;
     margin: 0;
     justify-content: space-evenly;
-    list-style: url('images/hearth.png');
+    list-style: url('../images/hearth.png');
 }
 
 #navbar li {
@@ -92,7 +131,7 @@ EXCEPT for the navigation */
 #flex ul {
     padding: 0;
     margin: 30px;
-    list-style: url('images/hearth.png');
+    list-style: url('../images/hearth.png');
 }
 
 #flex li a {
@@ -113,7 +152,7 @@ EXCEPT for the navigation */
 if you want to style them separately,
 create styles for #leftSidebar and #rightSidebar */
 aside {
-    background-color: #4F6639F2;
+    background-color: #1c1c1c;
     width: 200px;
     padding: 20px;
     font-size: smaller;
@@ -124,8 +163,10 @@ aside {
 /* this is the color of the main content area,
 between the sidebars! */
 main {
-    background-color: #556B2FF2;
-    flex: 1;
+    background-color: #2d2d30;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     padding: 20px;
     order: 2;
 }
@@ -145,7 +186,7 @@ left sidebar is 1, content is 2, and right sidebar is 3! */
 }
 
 footer {
-    background-color: #32411e;
+    background-color: #1e1e1e;
     /* background color for footer */
     width: 100%;
     height: 50px;
@@ -157,7 +198,7 @@ footer {
 h1,
 h2,
 h3 {
-    color: #ffffff;
+    color: #f9ceff;
 }
 
 h1 {
@@ -166,13 +207,13 @@ h1 {
 
 strong {
     /* this styles bold text */
-    color: #ffffff;
+    color: #fceaff;
 }
 
 /* this is just a cool box, it's the darker colored one */
 box {
-    background-color: #32411e;
-    border: 1px solid #556B2FFF;
+    background-color: #1e1e1e;
+    border: 1px solid #2d2d30;
     padding: 10px;
 }
 
@@ -183,7 +224,7 @@ box {
     height: 30px;
     padding: 10px;
     font-size: smaller;
-    background-color: #4F6639F2;
+    background-color: #2d2d30;
 }
 
 
@@ -230,152 +271,96 @@ and then subtrack it by 100. use this new number as the
     box-sizing: border-box
 }
 
-/* Slideshow container */
-.slideshow-container {
-    max-width: 1000px;
-    position: relative;
-    margin: auto;
-}
-
-/* Hide the images by default */
-.mySlides {
-    display: none;
-}
-
-/* Next & previous buttons */
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Caption text */
-.text {
-    color: #f2f2f2;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
+/* buttons */
+.button {
+    background-color: #242B33;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
     text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
+    text-decoration: none;
     display: inline-block;
-    transition: background-color 0.6s ease;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
 }
 
-.active, .dot:hover {
-    background-color: #717171;
+.button:hover {
+    background-color: #37404A;
 }
 
-/* Fading animation */
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
+/* Additional styling for specific buttons */
+#fetch-button {
+    background-color: #BDBDBD;
+    color: #242B33;
 }
 
-@keyframes fade {
-    from {
-        opacity: .4
-    }
-    to {
-        opacity: 1
-    }
+#prev-button, #next-button {
+    background-color: #BDBDBD;
 }
 
-.row {
+#note {
+    font-size: small;
+    color: #707079;
+
+}
+
+/*
+dropdown menu
+*/
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #00000000;
+    font-family: 'Minecraft', sans-serif;
+    color: #fceaff;
+    border: none;
     display: flex;
-    flex-wrap: wrap;
-    padding: 0 4px;
-}
-
-/* Create four equal columns that sits next to each other */
-.column {
-    flex: 50%;
-    max-width: 50%;
-    padding: 0 4px;
-}
-
-.column img {
-    margin-top: 8px;
-    vertical-align: middle;
-    width: 100%;
-}
-
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
-    .column {
-        flex: 50%;
-        max-width: 50%;
-    }
-}
-
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-    .column {
-        flex: 100%;
-        max-width: 100%;
-    }
-}
-
-#lastPlayed {
-    background-color: #3a4820;
-    box-shadow: 0 2px 4px rgb(0, 0, 0);
-    padding: 20px;
-    max-width: 300px;
+    margin: 0;
+    justify-content: space-evenly;
+    font-size: large;
     text-align: center;
 }
 
-#lastPlayed h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
 }
 
-#lastPlayed p {
-    font-size: 16px;
-    margin-bottom: 0;
-    color: #bbbbbb;
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
-#lastPlayed img {
-    max-width: 120px;
-    height: auto;
-    margin: 0 auto;
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    background-color: #2d2d30;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #000000;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    color: #9d9d9d;
+    text-decoration: underline;
+}
+
+#video-container {
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
 }
