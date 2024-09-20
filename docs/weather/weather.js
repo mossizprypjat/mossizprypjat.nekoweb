@@ -352,7 +352,6 @@ function displayWeatherData(data) {
                 day: '2-digit',
                 month: '2-digit',
                 year: 'numeric',
-                hour: '2-digit',
             };
             const formatter = new Intl.DateTimeFormat('en-GB', options);
             const formattedTime = formatter.format(new Date(time));
